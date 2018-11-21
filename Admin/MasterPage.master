@@ -1,0 +1,113 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>Untitled Page</title>
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+    <form id="form1" runat="server">
+<!-- ImageReady Slices (Login.psd) -->
+<table id="Table_01" width="1000" height="600" border="0" cellpadding="0" cellspacing="0">
+	<tr>
+		<td colspan="3">
+			<asp:Image ID="Image1" runat="server" Height="44px" ImageUrl="~/Image/xx.JPG" 
+                Width="996px" />
+        </td>
+	</tr>
+
+	<tr>
+		<td style="background-image: url('image/Login_02.gif'); "height="103" width="1000" colspan="3">
+			<%--<img src="image/Login_02.gif" width="1000" height="103" alt="">--%></td>
+	</tr>
+	<tr>
+		<td style="background-color:#d4e7f5" height="424" width="232" align="center" valign="middle" >
+            &nbsp;<asp:Menu ID="Menu1" runat="server" BackColor="#D4E7F5" CssClass="navigatemenu"
+                Height="374px" Width="130px">
+                <Items>
+                    <asp:MenuItem ImageUrl="~/Images/home.gif" NavigateUrl="~/Admin/Welcomepage.aspx"
+                        Text="Home" Value="Home"></asp:MenuItem>
+                    <asp:MenuItem ImageUrl="~/Images/timetable.gif" Text="Time Table" Value="Time Table">
+                        <asp:MenuItem Text="Add TimeTable" Value="Add TimeTable"></asp:MenuItem>
+                        <asp:MenuItem Text="Edit TimeTable" Value="Edit TimeTable"></asp:MenuItem>
+                    </asp:MenuItem>
+                    <asp:MenuItem ImageUrl="~/Images/admin.gif" Text="PassWord" Value="PassWord">
+                        <asp:MenuItem NavigateUrl="~/Admin/Password.aspx" Text="Leaturer PassWord" 
+                            Value="Teacher PassWord">
+                        </asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Admin/StudentPassword.aspx" Text="Student Password"
+                            Value="Student Password"></asp:MenuItem>
+                    </asp:MenuItem>
+                    <asp:MenuItem Text="Add Marks" Value="Add Marks"></asp:MenuItem>
+                    <asp:MenuItem ImageUrl="~/Images/assignment.gif" Text="Assignments" Value="Assignments">
+                        <asp:MenuItem NavigateUrl="~/Admin/AddAssignments.aspx" Text="Add-Assignments" Value="Add-Assignments">
+                        </asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Admin/View Assignment.aspx" Text="View-Assignments"
+                            Value="View-Assignments"></asp:MenuItem>
+                    </asp:MenuItem>
+                    <asp:MenuItem ImageUrl="~/Images/examschedule.gif" Text="Exam Schedule " Value="Exam Schedule ">
+                        <asp:MenuItem Text="Add Exam Schedule " Value="Add Exam Schedule "></asp:MenuItem>
+                        <asp:MenuItem Text="Edit Exam Schedule " Value="Edit Exam Schedule "></asp:MenuItem>
+                    </asp:MenuItem>
+                    <asp:MenuItem ImageUrl="~/Images/holiday.gif" Text="Holidays" Value="Holidays">
+                        <asp:MenuItem NavigateUrl="~/Admin/AddHoliday.aspx" Text="Add Holidays" Value="Add Holidays">
+                        </asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Admin/ViewHolidays .aspx" Text="Edit Holidays" Value="Edit Holidays">
+                        </asp:MenuItem>
+                    </asp:MenuItem>
+                    <asp:MenuItem ImageUrl="~/Images/internalmessage.gif" Text="Internal Messaging" Value="Internal Messaging">
+                        <asp:MenuItem NavigateUrl="~/Admin/AddMSG.aspx" Text="Send Message" Value="Send Message">
+                        </asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Admin/ViewMSG.aspx" Text="View Message" Value="View Message">
+                        </asp:MenuItem>
+                    </asp:MenuItem>
+                    <asp:MenuItem ImageUrl="~/Images/teacher.gif" Text="Lecturer" Value="Teacher ">
+                        <asp:MenuItem NavigateUrl="~/Admin/AddTeacher.aspx" Text="Add-Teacher " Value="Add-Teacher ">
+                        </asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Admin/View Teachers.aspx" Text="Edit-Teacher " Value="Edit-Teacher ">
+                        </asp:MenuItem>
+                    </asp:MenuItem>
+                    <asp:MenuItem ImageUrl="~/Images/student.gif" Text="Student" Value="Student">
+                        <asp:MenuItem NavigateUrl="~/Admin/Student.aspx" Text="Add-Student" Value="Add-Student">
+                        </asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Admin/ViewStudent.aspx" Text="Edit-Student" Value="Edit-Student">
+                        </asp:MenuItem>
+                    </asp:MenuItem>
+                    <asp:MenuItem Text="Configar" Value="Configar">
+                        <asp:MenuItem Text=" Class" Value="Add Class">
+                            <asp:MenuItem NavigateUrl="~/Admin/AddClass.aspx" Text="Add Class" Value="Add Class">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Admin/ViewClass.aspx" Text="Edit Class" Value="Edit Class">
+                            </asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Subjects" Value="Subjects">
+                            <asp:MenuItem NavigateUrl="~/Admin/AddSubject.aspx" Text="Add Subjects" Value="Add Subjects">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Admin/ViewSubjects.aspx" Text="Edit Subject" Value="Edit Subject">
+                            </asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Admin/ViewNotices.aspx" Text="NoticesDetails" Value="NoticesDetails">
+                        </asp:MenuItem>
+                    </asp:MenuItem>
+                </Items>
+            </asp:Menu>
+			<%--<img src="image/Login_03.gif" width="232" height="424" alt="">--%></td>
+		<td>
+			<img src="image/Login_04.gif" width="534" height="424" alt=""></td>
+
+		<td  style="background-color:#d4e7f5"  height="424" width="234" >
+			<%--<img src="image/Login_05.gif" width="234" height="424" alt="">--%></td>
+	</tr>
+	<tr>
+		<td style="background-image: url('image/Login_06.gif'); "height="22" width="1000" colspan="3">
+			<%--<img src="image/Login_06.gif" width="1000" height="22" alt="">--%></td>
+	</tr>
+</table>
+<!-- End ImageReady Slices -->
+    </form>
+</body>
+
+
+
+</html>

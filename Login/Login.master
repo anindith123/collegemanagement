@@ -1,0 +1,134 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Login.master.cs" Inherits="Admin_Login" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Untitled Page</title>
+    <link href="../Includes/rfnet.css" rel="stylesheet" type="text/css" />
+    <link href="../Includes/styles.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        .style1
+        {
+            height: 18px;
+        }
+    </style>
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+    <!-- ImageReady Slices (Login.psd) -->
+    <form id="Form1" runat="server">
+        <table id="Table_01" width="100%" height="600" border="0" cellpadding="0" cellspacing="0">
+            <tr>
+                <td colspan="3">
+                    <img src="../Images/Login_01.JPG" width="1000" height="51" alt=""></td>
+            </tr>
+            <tr>
+                <td style="background-image: url('image/Login_02.gif');" height="103" width="95%"
+                    colspan="3">
+                    <%--<img src="image/Login_02.gif" width="1000" height="103" alt="">--%>
+                </td>
+            </tr>
+            <tr>
+                <td style="background-color: #d4e7f5;" width="20%" height="424" valign="top">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                    <%--<img src="image/Login_03.gif" width="232" height="424" alt="">--%>
+                </td>
+                <td style="background-image: url('image/Login_04.gif'); width: 523px;" height="424" valign="top">
+                    <%--<img src="image/Login_04.gif" width="534" height="424" alt="">--%>
+                   <table width="100%">
+                        <tr>
+                            <td colspan="2" >
+                                <div align="justify">
+                                    <font face="Verdana" size="2"><strong><font color="#ff0000">&nbsp;College Management 
+                                    System</font></strong> is a unique and comprehensive web-based college Management Software with an online
+                                        interactive interface perfoms on intranet or internet version.</font></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td rowspan="5" width="26%">
+                                <asp:Image ID="Image1" runat="server" Height="202px" ImageUrl="~/Images/middle.gif"
+                                    Width="242px" /></td>
+                            <td width="74%">
+                                <font face="Verdana" size="2">It benefit 's through its interactive editions for <strong>
+                                    : </strong></font>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <li style="font-weight: bold; color: #FF0000">&nbsp;<font face="Verdana" size="2" 
+                                        style="font-weight: bold; color: #FF0000">Students </font></li>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="style1">
+                                <li style="font-weight: bold; color: #FF0000">&nbsp;<font face="Verdana" size="2">Lecturer</font></li>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <li style="font-weight: bold; font-size: medium; color: #FF0000">&nbsp;Admin</li></td>
+                        </tr>
+                        <tr>
+                            <td>
+                            </td>
+                        </tr>
+                    </table>
+                    <table bgcolor="#efefef" border="0" cellpadding="3" cellspacing="1" class="gentxt"
+                        width="100%">
+                        <tr bgcolor="#ffffff">
+                            <td colspan="4">
+                            </td>
+                        </tr>
+                        <tr bgcolor="#ffffff">
+                            <td colspan="4">
+                                <font face="Verdana" size="2">It is an innovative technology solution for educational
+                                    institutions.The ESM solution is unique,which provides precisely, such a framework
+                                    and enables institutions to reap the full benefits of information technology.</font></td>
+                        </tr>
+                    </table>
+                </td>
+                <td style="background-color: #d4e7f5" height="424" width="20%">
+                    <asp:Label ID="Label1" runat="server" Text="Notices" Font-Bold="True" Font-Names="Arial"
+                        Font-Size="9pt" ForeColor="Black"></asp:Label>
+                    <asp:GridView ID="GdVNotice" runat="server" AutoGenerateColumns="False" BorderColor="White" 
+                        Font-Names="Arial" Font-Size="9pt" Height="346px" Width="176px" AllowPaging="True" OnPageIndexChanging="GdVNotice_PageIndexChanging" PageSize="6">
+                        <Columns>
+                            <asp:TemplateField>
+                                <ItemTemplate>
+                                    <table>
+                                        <tr>
+                                            <td>
+                                                <asp:Label ID="lblTitle" runat="server" ForeColor="Blue" Text='<%#Eval("Title") %>'></asp:Label></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <%--<asp:Label ID="Label2" runat="server" Text='<%#Eval("Class") %>'></asp:Label></td>--%>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <asp:Label ID="LblDescription" runat="server" Text='<%#Eval("Description") %>'>'></asp:Label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <asp:Label ID="LblNDate" runat="server" Text='<%#Eval("NDate") %>'></asp:Label>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                        </Columns>
+                        <RowStyle HorizontalAlign="Center" />
+                    </asp:GridView>
+                    &nbsp;<%--<img src="image/Login_05.gif" width="234" height="424" alt="">--%></td>
+            </tr>
+            <tr>
+                <td style="background-image: url('image/Login_06.gif');" height="22" width="1000"
+                    colspan="3">
+                    <%--<img src="image/Login_06.gif" width="1000" height="22" alt="">--%>
+                </td>
+            </tr>
+        </table>
+    </form>
+    <!-- End ImageReady Slices -->
+</body>
+</html>

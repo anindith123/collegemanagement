@@ -1,0 +1,1 @@
+select * from Tbl_TimeTableStudent where I like '%raju,%' or II like '%raju,%' or III like '%raju,%' or IV like '%raju,%' or V like '%raju,%' or VI like '%raju,%' or VII like '%raju,%'

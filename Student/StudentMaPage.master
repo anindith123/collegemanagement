@@ -1,0 +1,111 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="StudentMaPage.master.cs"
+    Inherits="Student_StudentMaPage" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Untitled Page</title>
+     <link href="../Includes/rfnet.css" rel="stylesheet" type="text/css" />
+    <link href="../Includes/styles.css" rel="stylesheet" type="text/css" />
+    <script language="javascript" type="text/javascript" src="../Includes/datetimepicker.js"></script>
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+    <!-- ImageReady Slices (Login.psd) -->
+    <form id="Form1" runat="server">
+        <table id="Table_01" width="1000" height="600" border="0" cellpadding="0" cellspacing="0">
+            <tr>
+                <td style="background-image: url('image/Login_01.JPG');" height="51" width="1000"
+                    colspan="3" align="right">
+                   <%-- <img src="image/Login_01.gif" width="1000" height="51" alt="">--%></td>
+            </tr>
+            <tr>
+                <td style="background-image: url('image/Login_02.gif'); height: 103px;" width="100%"
+                    colspan="3" align="right" valign="bottom">
+                    <asp:Label ID="LblStudentName" runat="server" Style="z-index: 100; left: 478px; position: absolute;
+                        top: 90px" Text="Label" Font-Bold="True" Font-Size="10pt" ForeColor="White"></asp:Label>
+                    <asp:LinkButton ID="Logout" runat="server" Font-Bold="True" ForeColor="White" 
+                        OnClick="Logout_Click" PostBackUrl="~/Login/start.aspx">Logout</asp:LinkButton><%--<img src="image/Login_02.gif" width="1000" height="103" alt="">--%></td>
+            </tr>
+            <tr>
+                <td style="background-color: #d4e7f5;" width="20%" height="324" align="center" valign="top">
+                    <asp:Menu ID="Menu1" runat="server" CssClass="navigatemenu" Height="427px" Width="91px">
+                        <Items>
+                            <asp:MenuItem ImageUrl="~/Images/home.gif" NavigateUrl="~/Student/WelcomePage.aspx"
+                                Text="Home" Value="Home"></asp:MenuItem>
+                            <asp:MenuItem ImageUrl="~/Images/timetable.gif" Text="Time Table" Value="Time Table" NavigateUrl="~/Student/View TimeTable.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="View Marks" Value="Add Marks" ImageUrl="~/Images/admin.gif" NavigateUrl="~/Student/View Reports.aspx"></asp:MenuItem>
+                            <asp:MenuItem ImageUrl="~/Images/assignment.gif" Text="Assignments" Value="Assignments" NavigateUrl="~/Student/View Assignment.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem ImageUrl="~/Images/examschedule.gif" Text="Exam Schedule " Value="Exam Schedule " NavigateUrl="~/Student/View Exam.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem ImageUrl="~/Images/holiday.gif" Text="Holidays" Value="Holidays" NavigateUrl="~/Student/ViewHolidays .aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem ImageUrl="~/Images/internalmessage.gif" Text="Internal Messaging" Value="Internal Messaging">
+                                <asp:MenuItem Text="Send Message" Value="Send Message" NavigateUrl="~/Student/AddMSG.aspx">
+                                </asp:MenuItem>
+                                <asp:MenuItem Text="View Message" Value="View Message" NavigateUrl="~/Student/ViewMSG.aspx">
+                                </asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem ImageUrl="~/Images/profile.gif" NavigateUrl="~/Student/Student.aspx"
+                                Text="My Profile" Value="My Profile"></asp:MenuItem>
+                        </Items>
+                    </asp:Menu>
+                    <%--<img src="image/Login_03.gif" width="232" height="424" alt="">--%>
+                </td>
+                <td style="background-image: url('image/Login_04.gif'); width: 523px;" height="424"
+                    valign="top">
+                    <%--<img src="image/Login_04.gif" width="534" height="424" alt="">--%>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </td>
+                <td style="background-color: #d4e7f5" height="324" width="20%" align="center" valign="top">
+                    <asp:Label ID="Label1" runat="server" Text="Notices" Font-Bold="True" Font-Names="Arial"
+                        Font-Size="9pt" ForeColor="Black"></asp:Label>
+                        
+                    <asp:GridView ID="GdVNotice" runat="server" AutoGenerateColumns="False" BorderColor="White"
+                        Font-Names="Arial" Font-Size="9pt" Height="423px" Width="192px" AllowPaging="True"
+                        OnPageIndexChanging="GdVNotice_PageIndexChanging" PageSize="6">
+                        <Columns>
+                            <asp:TemplateField>
+                                <ItemTemplate>
+                                    <table>
+                                        <tr>
+                                            <td>
+                                                <asp:Label ID="Label2" runat="server" ForeColor="Blue" Text='<%#Eval("Title") %>'>'></asp:Label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <asp:Label ID="Label3" runat="server" Text='<%#Eval("Class") %>'>'></asp:Label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <asp:Label ID="LblDescription" runat="server" Text='<%#Eval("Description") %>'>'></asp:Label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <asp:Label ID="LblNDate" runat="server" Text='<%#Eval("NDate") %>'></asp:Label>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                        </Columns>
+                        <RowStyle HorizontalAlign="Center" />
+                    </asp:GridView>
+                    <%--<img src="image/Login_05.gif" width="234" height="424" alt="">--%>
+                </td>
+            </tr>
+            <tr>
+                <td style="background-image: url('image/Login_06.gif');" height="22" width="1000"
+                    colspan="3">
+                    <%--<img src="image/Login_06.gif" width="1000" height="22" alt="">--%>
+                </td>
+            </tr>
+        </table>
+    </form>
+    <!-- End ImageReady Slices -->
+</body>
+</html>

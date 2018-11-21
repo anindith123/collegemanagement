@@ -1,0 +1,130 @@
+Question - Define assembly. 
+Answer - An assembly is the primary unit of a .NET application. It includes an assembly manifest that describes the assembly.
+
+Question - What is Constructor? 
+Answer - It is the first method that are called on instantiation of a type. It provides way to set default values for data before the object is available for use. Performs other necessary functions before the object is available for use. 
+
+
+Question - What is Destructor? 
+Answer - It is called just before an object is destroyed. It can be used to run clean-up code. You can't control when a destructor is called since object clean up by common language runtime. 
+
+Question - Define Abstract class in C#.NET.
+
+Answer - Abstract class cannot be instantiated.
+
+Same concept in C++ known as pure virtual method. 
+
+A class that must be inherited and have the methods over-ridden. 
+
+A class without any implementation.
+
+
+Question - Explain serialization? 
+Answer - Serialization is a process of converting an object into a stream of bytes. .Net has 2 serializers namely XMLSerializer and SOAP/BINARY Serializer. Serialization is maily used in the concept of .Net Remoting.  
+
+ 
+
+Question - C#.Net support multiple inheritance, comment.  
+
+Answer - No, but we can use interface instead.
+
+ 
+
+Question - Can private virtual methods be overridden in C#.NET? 
+
+Answer - No, moreover, you cannot access private methods in inherited classes, 
+
+They have to be protected in the base class to allow any sort of access.
+
+ 
+
+C#.NET Interview questions with answers posted on July 22, 2008 at 8:10 am
+Question - Is is possible to force garbage collector to run?
+Answer
+Yes, we can force garbage collector to run using System.GC.Collect(). 
+ 
+
+
+ 
+
+Interview questions and answers on .Net web service includes following questions with answers
+
+What is XML Web Server? | Describe the Components that help locate and consume XML Web Service. | Describe the process of communication between Client and Web Service. | What are the components published while deploying of Web Service? | Describe .disco file. | Describe the step to be followed to access web service by client.
+
+.NET Code Security Interview questions with answers
+
+What is code security? What are the types? | Define Principal object. | Define declarative and imperative security. | Define role-based security. | Explain code access security. | What is Code group? | Define the use of Caspol.exe. 
+
+.NET Debug & Trace Interview questions with answers 
+
+What is break mode? What are the options to step through code? | Debug Vs Trace. | Define trace class. Define Listeners collection of Trace and Debug objects. | Define Trace Switches. 
+
+.Net Framework Interview Question with answers
+
+Explain the .Net Framework. | Describe the .Net Framework Architecture. | What are the components of the .Net Framework. | Explain the role of assembly in the .Net Framework. | Describe the GAC in the .Net Framework. 
+
+.NET Assembly Interview questions with answers
+
+Define .Net Assembly. | What does an assembly contain? | Define a private assembly and a shared assembly. | What are Satellite Assemblies? | What do you understand by side-by-site execution of assembly? | How do you create a resource-only assembly? | Explain how to retrieve resources using ResourceManager class. | Define Strong Name. | How do you apply a strong name to assembly? | Define Global Assembly Cache. | How do you install assembly to the Global Assembly Cache? 
+
+
+
+Part 1 | Part 2 | Part 3 | Part 4 | part 5
+ Today's Hot Jobs 
+ C++ 
+ SQL Server 
+ .NET 
+ Java 
+ Oracle 
+ Finance 
+ Marketing 
+Register to grab a better job now! 
+Connect yourself with top recruiters 
+More Jobs   |   Job Seekers   |   Employers 
+
+Related interview questions 
+
+>NET Access Modifiers
+>Net Architecture 
+>NET Assemblies
+>NET Base class library 
+>NET Binding, viewing, filtering
+>NET Class and Structures
+>NET CLR 
+>NET Configuring 
+>NET Configuring setup 
+>NET Constants, Enum
+>NET Constructors & destructors 
+>NET Control 
+>NET Dataset objects 
+>NET Data Types 
+>NET Debugging Tools 
+>NET Debug & trace classes
+>NET Delegates and events
+>NET Exception handling 
+>NET Form 
+>NET Garbage collection 
+>NET Globalization & localization
+>NET Interoperability 
+>NET Menu 
+>NET Project Deployment 
+>NET Properties 
+>NET Securing Application
+>NET Using XML in ADO.NET
+>NET Validating User Input
+>NET Windows communication foundation 
+>Net Windows presentation foundation 
+>Net Windows workflow foundation 
+ 
+
+
+
+ASP.NET Interview questions part 2 includes following questions with answers
+Define access modifiers. | Name the namespace for Web page in ASP.NET. | Write difference between overloading and overriding. | Write Namespace for user locale in ASP.NET. | How do you implement inheritance in .NET? | Explain the differences between Server-side and Client-side code. | Define ADO.NET Dataset. | Define global.asax in ASP.NET. | What are the Application_Start and Session_Start subroutines used for? | Define inline code and code behind. | What is MSIL? | Name the class Web Forms inherit from. 
+
+ASP.NET Interview questions part 3 includes following questions with answers
+What is Shared (static) member? | What is the transport protocol you use to call a Web service? | What is Option Strict used for? | Define Boxing and Unboxing. | What does WSDL stand for? | Define ViewState in ASP.NET. | What is the lifespan for items stored in ViewState? | Define EnableViewState property. | What are Delegates? | What are Classes? | What is Encapsulation? | Different types of Session state management options available with ASP.NET? | What methods are fired during the page load? | Explain ADO.NET. 
+
+ASP.NET Interview questions part 4 includes following questions with answers
+Define Server-side and Client-side code in ASP.NET. | What tag do you use to add a hyperlink column to the DataGrid? | Where does VS.NET store Web application projects? | Describe Web application’s life cycle | Define class module and a code module. | Steps to execute a stored procedure from Web Application | Describe exception handling in ASP.NET | What are the exception-handling ways in ASP.NET? 
+
